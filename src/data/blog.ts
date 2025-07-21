@@ -1,13 +1,13 @@
 import {BlogPostProps} from "@/lib/types";
 
 const posts: BlogPostProps[] = [
-    // {
-    //     slug: 'post1',
-    //     title: 'Getting Started with Bash',
-    //     summary: 'Learn the basics of Bash scripting and how to automate tasks on Linux and Mac systems.',
-    //     date: '2024-11-02',
-    //     tags: ['bash', 'scripting', 'linux', 'shell']
-    // },
+    {
+        slug: 'post1',
+        title: 'Getting Started with Bash',
+        summary: 'Learn the basics of Bash scripting and how to automate tasks on Linux and Mac systems.',
+        date: '2024-11-02',
+        tags: ['bash', 'scripting', 'linux', 'shell']
+    },
     // {
     //     slug: 'post2',
     //     title: 'What is JavaScript?',
