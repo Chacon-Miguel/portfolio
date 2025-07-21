@@ -13,3 +13,13 @@ export interface BlogPostProps {
     date: string;
     tags?: string[];
 }
+
+export interface ProjectProps {
+    slug: string;
+    title: string;
+    image: string;
+    description: string;
+    startDate: string;
+    endDate: string;
+    techStack: string[];
+}

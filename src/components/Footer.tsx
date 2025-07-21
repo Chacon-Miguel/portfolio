@@ -13,49 +13,35 @@ export default function Footer() {
         >
             <div className="flex justify-center gap-6 mb-2 text-lg">
                 <Link
-                    href="/"
+                    href="https://github.com/Chacon-Miguel"
                     aria-label="GitHub"
                     className="hover:text-blue-500 transition-transform hover:scale-125 duration-200"
                 >
                     <FaGithub/>
                 </Link>
                 <Link
-                    href="/"
+                    href="https://www.linkedin.com/in/chaconm36/"
                     aria-label="LinkedIn"
                     className="hover:text-blue-500 transition-transform hover:scale-125 duration-200"
                 >
                     <FaLinkedin/>
                 </Link>
                 <Link
-                    href="/"
+                    href="https://www.goodreads.com/user/show/190494717-miguel-chacon"
                     aria-label="GoodReads"
                     className="hover:text-blue-500 transition-transform hover:scale-125 duration-200"
                 >
                     <FaGoodreads/>
                 </Link>
                 <Link
-                    href="/"
+                    href="https://www.instagram.com/mig9253"
                     aria-label="Instagram"
                     className="hover:text-blue-500 transition-transform hover:scale-125 duration-200"
                 >
                     <FaInstagram/>
                 </Link>
                 <Link
-                    href="/"
-                    aria-label="X"
-                    className="hover:text-blue-500 transition-transform hover:scale-125 duration-200"
-                >
-                    <FaXTwitter/>
-                </Link>
-                <Link
-                    href="/"
-                    aria-label="Reddit"
-                    className="hover:text-blue-500 transition-transform hover:scale-125 duration-200"
-                >
-                    <FaReddit/>
-                </Link>
-                <Link
-                    href="mailto:<EMAIL>"
+                    href="mailto:chaconm36@gmail.com"
                     target="_blank"
                     aria-label="Email"
                     className="hover:text-blue-500 transition-transform hover:scale-125 duration-200"
@@ -65,7 +51,7 @@ export default function Footer() {
             </div>
 
             {/* Copyright section */}
-            <p className="text-xs sm:text-sm">© {new Date().getFullYear()} John Doe. All rights reserved.</p>
+            <p className="text-xs sm:text-sm">© {new Date().getFullYear()} Miguel Chacon. All rights reserved.</p>
 
             {/* Display version & Link to GitHub Repo */}
             {/* You can update or remove this for your own template */}
@@ -83,7 +69,7 @@ export default function Footer() {
                     <span
                         className="font-semibold hover:text-blue-500 transition-colors duration-200"
                     >
-                        @alemoraru
+                        @Chacon-Miguel
                     </span>
                 </Link>
             </p>

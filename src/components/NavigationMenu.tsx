@@ -1,9 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import {usePathname} from 'next/navigation'
-import {useEffect, useState} from 'react'
-import {navItems} from '@/lib/constants'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import { navItems } from '@/lib/constants'
 
 /**
  * NavigationMenu component that displays a horizontal navigation menu.
@@ -14,7 +14,7 @@ export default function NavigationMenu() {
     const [activeIndex, setActiveIndex] = useState(0)
 
     useEffect(() => {
-        const index = navItems.findIndex(({path}) =>
+        const index = navItems.findIndex(({ path }) =>
             path === '/' ? pathname === '/' : pathname.startsWith(path)
         )
         setActiveIndex(index !== -1 ? index : 0)
@@ -35,7 +35,7 @@ export default function NavigationMenu() {
                         boxShadow: '0 2px 8px 0 rgba(59,130,246,0.10)',
                     }}
                 ></div>
-                {navItems.map(({name, path}, idx) => {
+                {navItems.map(({ name, path }, idx) => {
                     const isActive = pathname === path
                     return (
                         <li key={name} className="relative z-10 flex justify-center items-center">

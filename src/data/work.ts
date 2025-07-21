@@ -1,38 +1,38 @@
 const work = [
     {
-        slug: 'BigBossCorp',
-        company: 'Hypernova Labs',
+        slug: 'Doordash',
+        company: 'Doordash Inc.',
         title: 'Software Engineer',
-        start: 'Jan 2021',
+        start: 'Aug 2025',
         end: 'Present',
-        description: 'Led a team of 5 building scalable microservices with Node.js and AWS.',
-        locations: ['Remote', 'New York City (Hybrid)']
+        description: '',
+        locations: ['New York', 'New York (Hybrid)']
     },
     {
-        slug: 'MediumBossCorp',
-        company: 'Big Brain Technologies',
-        title: 'Software Engineer',
-        start: 'Jul 2018',
-        end: 'Dec 2020',
-        description: 'Worked on the core platform, optimizing React apps and APIs.',
-        locations: ['Remote', 'New York City']
-    },
-    {
-        slug: 'SmallBossCorp',
-        company: 'Small Boss Corp',
-        title: 'Software Engineer',
-        start: 'Jan 2017',
-        end: 'Jun 2018',
-        description: 'Assisted in developing web applications using PHP and MySQL.',
-        locations: ['Remote', 'San Francisco (Hybrid)'],
-    },
-    {
-        slug: 'InternBossCorp',
-        company: 'CodeNest',
+        slug: 'TRowePrice',
+        company: 'T. Rowe Price',
         title: 'Software Engineer Intern',
-        start: 'Mar 2021',
-        end: 'Sep 2021',
-        description: 'Building Java applications and learning about cloud technologies.',
+        start: 'Jun 2023',
+        end: 'Aug 2023',
+        description: 'Added an announcements management component to internal website to make company-wide communcations more efficient.',
+        locations: ['New York', 'New York (Hybrid)']
+    },
+    {
+        slug: 'MITKavliInstitute',
+        company: 'MIT Kavli Institute for Astrophysics and Space Research',
+        title: 'Machine Learning Research Assistant',
+        start: 'Sep 2022',
+        end: 'Aug 2023',
+        description: 'Assisted in developing a real-time classifier for the light curves of supernovae',
+        locations: ['Cambridge', 'Massachusetts'],
+    },
+    {
+        slug: 'JaneStreet',
+        company: 'Jane Street Capital',
+        title: 'Software Engineering Fellow',
+        start: 'June 2022',
+        end: 'Aug 2022',
+        description: 'Extended the OCaml Quickcheck library to include recursive types',
         locations: ['Vienna', 'Austra']
     }
 ]

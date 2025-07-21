@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import {usePathname} from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import blog from "@/data/blog";
 import projects from "@/data/projects";
 import work from "@/data/work";
@@ -41,9 +41,9 @@ export default function Breadcrumbs() {
         <div className="flex items-center gap-1 text-lg text-black dark:text-white my-auto">
             <Link href="/" className="hover:text-blue-400 font-semibold">
                 {/* Initials on mobile */}
-                <span className="block md:hidden">JD</span>
+                <span className="block md:hidden">MC</span>
                 {/* Full name on desktop */}
-                <span className="hidden md:inline">John Doe</span>
+                <span className="hidden md:inline">Miguel Chacon</span>
             </Link>
 
             {/* Crumbs part: show only on mobile, not on desktop */}
