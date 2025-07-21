@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import QuickFactsSection from "@/components/QuickFactsSection";
 import IntroSection from "@/components/IntroSection";
 import RecentWork from "@/components/RecentWork";
 import RecentProjects from "@/components/RecentProjects";

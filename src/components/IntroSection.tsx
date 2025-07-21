@@ -7,7 +7,7 @@ export default function IntroSection() {
                 Hi, I&#39;m Miguel 👋
             </h1>
             <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-left mb-6">
-                I&#39;m a software engineer with a focus on systems. I'm originally from Houston, TX and am now working as a backend engineer at Doordash. 
+                I&#39;m a software engineer with a focus on systems. I&#39;m originally from Houston, TX and am now working as a backend engineer at Doordash. 
                 Reach out for any questions on my job, books, or cats! 
             </p>
 
