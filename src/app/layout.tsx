@@ -11,32 +11,32 @@ const gabarito = Gabarito({
 });
 
 export const metadata: Metadata = {
-    title: 'Next.js Developer Portfolio Template',
-    description: 'Developer-focused portfolio starter built with Next.js, TypeScript, TailwindCSS, and optimized for SEO.',
+    title: 'Miguel Chacon',
+    description: 'Miguel Chacons portfolio website',
     icons: {
         icon: '/icons/favicon.ico',
         shortcut: '/icons/favicon.ico',
         apple: '/icons/favicon.ico',
     },
-    metadataBase: new URL('https://nextjs-portofolio-website.vercel.app'),
+    metadataBase: new URL('https://miguelchacon.dev'),
     openGraph: {
-        title: 'Next.js Developer Portfolio Template',
-        description: 'Developer-focused portfolio starter built with Next.js, TypeScript, TailwindCSS, and optimized for SEO.',
+        title: 'Miguel Chacons portfolio website',
+        description: 'Miguel Chacon portfolio website',
         url: 'https://nextjs-portofolio-website.vercel.app',
-        siteName: 'Next.js Developer Portfolio Template',
+        siteName: 'Miguel Chacon portfolio website',
         images: [
             {
                 url: '/og-image.png',
                 width: 1200,
                 height: 630,
-                alt: 'Next.js Developer Portfolio Template'
+                alt: 'Miguel Chacon'
             },
         ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Next.js Developer Portfolio Template',
-        description: 'Developer-focused portfolio starter built with Next.js, TypeScript, TailwindCSS, and optimized for SEO.',
+        title: 'Miguel Chacon',
+        description: '',
         images: ['/og-image.png']
     }
 }
