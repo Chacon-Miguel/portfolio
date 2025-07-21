@@ -2,11 +2,12 @@
 
 import WorkItem from '@/components/WorkItem'
 import work from '@/data/work'
-import {useMemo, useState} from "react";
+import { useMemo, useState } from "react";
 import SortDropdown from "@/components/SortDropdown";
 import FilterDropdown from "@/components/FilterDropdown";
-import {AnimatePresence, motion} from "framer-motion";
-import {FaFrown} from "react-icons/fa";
+import { AnimatePresence, motion } from "framer-motion";
+import { FaFrown } from "react-icons/fa";
+import Link from 'next/link';
 
 /**
  * WorkPage component that serves as the main page for displaying work experience.
@@ -24,7 +25,7 @@ export default function WorkPage() {
             companyCounts[workItem.company] = (companyCounts[workItem.company] || 0) + 1;
         });
         return Object.entries(companyCounts)
-            .map(([company, count]) => ({company, count}))
+            .map(([company, count]) => ({ company, count }))
             .sort((a, b) => a.company.localeCompare(b.company));
     }, []);
 
@@ -61,30 +62,40 @@ export default function WorkPage() {
 
     return (
         <section className="px-4 max-w-4xl mx-auto">
-            <div className="flex flex-wrap justify-between gap-4 mb-8 items-center w-full">
-                {/* Company Filter Dropdown - Left */}
-                <div className="relative flex-grow md:flex-grow-0">
-                    <FilterDropdown
-                        items={uniqueWorkCompany.map(({company, count}) => ({name: company, count}))}
-                        selectedItems={workCompanyDrafts}
-                        onToggle={toggleWorkCompanyDrafts}
-                        onApply={applyFilters}
-                        onClear={clearFilters}
-                        placeholder="Filter by Company"
-                        resultCount={filteredWorkItems.length}
-                    />
-                </div>
+            <div className="flex justify-between gap-4">
+                <div className="flex flex-wrap justify-start gap-4 mb-8 items-center w-full">
+                    {/* Company Filter Dropdown - Left */}
+                    <div className="relative flex-grow md:flex-grow-0">
+                        <FilterDropdown
+                            items={uniqueWorkCompany.map(({ company, count }) => ({ name: company, count }))}
+                            selectedItems={workCompanyDrafts}
+                            onToggle={toggleWorkCompanyDrafts}
+                            onApply={applyFilters}
+                            onClear={clearFilters}
+                            placeholder="Filter by Company"
+                            resultCount={filteredWorkItems.length}
+                        />
+                    </div>
 
-                {/* Sort Order Dropdown - Right */}
-                <div className="relative flex-grow md:flex-grow-0 z-20">
-                    <SortDropdown
-                        sortOrder={sortOrder}
-                        onChange={(order) => setSortOrder(order as 'newest' | 'oldest')}
-                        options={[
-                            {label: 'Newest First', value: 'newest'},
-                            {label: 'Oldest First', value: 'oldest'},
-                        ]}
-                    />
+                    {/* Sort Order Dropdown - Right */}
+                    <div className="relative flex-grow md:flex-grow-0 z-20">
+                        <SortDropdown
+                            sortOrder={sortOrder}
+                            onChange={(order) => setSortOrder(order as 'newest' | 'oldest')}
+                            options={[
+                                { label: 'Newest First', value: 'newest' },
+                                { label: 'Oldest First', value: 'oldest' },
+                            ]}
+                        />
+                    </div>
+                </div>
+                <div className="flex flex-wrap justify-end gap-4 mb-8 w-full md:flex-grow-0">
+                    <Link
+                        target="_blank"
+                        href={'/CHACON_Miguel_2025.pdf'}
+                        className="cursor-pointer flex items-center justify-center border px-4 py-2 rounded bg-white dark:bg-gray-800
+                dark:border-gray-600 shadow-sm hover:bg-gray-100 dark:hover:bg-gray-700 text-sm text-gray-800 dark:text-gray-200 text-center"
+                    >Download Resume</Link>
                 </div>
             </div>
 
@@ -93,9 +104,9 @@ export default function WorkPage() {
                     <motion.div
                         key="work-items"
                         className="space-y-6 grid"
-                        initial={{opacity: 0}}
-                        animate={{opacity: 1}}
-                        exit={{opacity: 0}}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
                     >
                         {filteredWorkItems.map((item) => (
                             <WorkItem key={item.slug} {...item} />
@@ -105,12 +116,12 @@ export default function WorkPage() {
                     <motion.div
                         key="no-results"
                         className="flex flex-col items-center text-center text-gray-600 dark:text-gray-300 mt-12 px-4"
-                        initial={{opacity: 0, y: 10}}
-                        animate={{opacity: 1, y: 0}}
-                        exit={{opacity: 0, y: 10}}
-                        transition={{duration: 0.3, ease: 'easeOut'}}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.3, ease: 'easeOut' }}
                     >
-                        <FaFrown className="text-4xl md:text-5xl mb-3 text-gray-400 dark:text-gray-500"/>
+                        <FaFrown className="text-4xl md:text-5xl mb-3 text-gray-400 dark:text-gray-500" />
                         <p className="text-lg md:text-xl lg:text-2xl font-semibold">
                             No work items found
                         </p>

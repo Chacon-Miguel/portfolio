@@ -1,13 +1,8 @@
 ---
 name: Jane Street
-description: Small Boss Corp is a small company that specializes in creating and selling high-quality, affordable products. They are known for their innovative designs and commitment to customer satisfaction.
+description: Jane Street is a global quantitative trading firm and liquidity provider that operates at the intersection of finance and advanced technology. The firm uses sophisticated mathematical models, vast datasets, and high-performance software systems to make markets and manage risk across a wide range of asset classes. With a strong emphasis on functional programming—particularly OCaml—Jane Street builds and maintains proprietary trading infrastructure that supports low-latency execution and large-scale data analysis.
 techStack:
-  - React
-  - TypeScript
-  - TailwindCSS
-  - Node.js
-  - PostgreSQL
-  - Azure
+  - Ocaml
 ---
 
 import {TimelineItem} from "../../components/mdx/Timeline";
@@ -17,59 +12,26 @@ import {Timeline} from "../../components/mdx/Timeline";
 
 <Timeline>
     <TimelineItem
-        title="Software Engineer"
-        duration="05/2023 - 06/2023"
-        location="Remote"
+        title="Software Engineering Fellow"
+        duration="06/2022 - 08/2022"
+        location="New York, New York"
     >
-        - Leading a team of developers to build scalable web applications.
-        - Implementing best practices in code quality and performance optimization.
-        - Mentoring junior developers and conducting code reviews.
-    </TimelineItem>
-    <TimelineItem
-        title="Junior Software Engineer"
-        duration="11/2022 - 05/2023"
-        location="San Francisco, CA"
-    >
-        - Developed and maintained web applications using **React** and **TypeScript**.
-        - Collaborated with cross-functional teams to design and implement new features.
-    </TimelineItem>
-
-    <TimelineItem
-        title="Intern"
-        duration="06/2022 - 10/2022"
-        location="Remote"
-    >
-        - Assisted in development of web applications.
-        - Participated in code reviews and Agile ceremonies.
-    </TimelineItem>
-
-    <TimelineItem
-        title="Intern"
-        duration="09/2021 - 03/2022"
-        location="Remote"
-    >
-        - Assisted in development of web applications, more specifically on node.js and PostgreSQL.
-        - Participated in code reviews and Agile ceremonies.
+        - Learned OCaml by creating Snake and then extended it significantly by adding a leaderboard, home screen, multiplayer version and then made it into a client-server distributed system.
+        - Created a trading bot that partook in an electronic trading challenge (ETC) where bonds, ETFs, and American Depository Receipts (ADRs) were traded. Strategies I implemented were hedging and fading based on fair values that my bot estimated
+        - Extended the Quickcheck library, which allows one to create quick unit-tests. The library has generators, which return random data to write tests; shrinkers, which when a test fails, finds a smaller counterexample; and observers, which are generators but for higher-order functions. I implemented all three for functional queues and deques, lazy strings, and error messages.
     </TimelineItem>
 </Timeline>
 
-## Key Projects
-
-- **Product Launch Site**: Designed and developed landing pages for product launch using Next.js.
-- **Inventory Management Dashboard**: Improved dashboard performance by 45%.
-
 ## Skills Developed
 
-- Frontend architecture
-- API integration
-- DevOps basics (Azure pipelines)
+- Functional Programming
+- Concurrency
 
 ## Tools Used
 
-- Jira
-- Figma
-- GitHub Actions
+- AWS
+- Linux
 
 ## Personal Highlight
 
-Shipping the company's first SaaS product within 5 months!
+Getting 2nd place in the electornic trading challenge!

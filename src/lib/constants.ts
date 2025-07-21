@@ -14,7 +14,7 @@ export const navItems = [
  * Temporary mapping for tech stack icons.
  */
 export const techStackMap: Record<string, string> = {
-    'React': 'reactjs',
+    'React': 'react',
     'TypeScript': 'typescript',
     'TailwindCSS': 'tailwindcss',
     'Node.js': 'nodejs',
@@ -39,7 +39,15 @@ export const techStackMap: Record<string, string> = {
     'Spring': 'spring',
     'Spring Boot': 'spring',
     'Git': 'git',
-    'GitLab': 'gitlab'
+    'GitLab': 'gitlab',
+    'Kotlin': 'kotlin',
+    'Snowflake': 'snowflake',
+    'Kafka': 'kafka',
+    'Ocaml': 'ocaml',
+    'Tensorflow': 'tensorflow',
+    'Keras': 'keras',
+    'Express.js': 'expressjs',
+    'Jest': 'jest',
 }
 
 /**

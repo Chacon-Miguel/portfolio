@@ -1,14 +1,11 @@
 ---
 name: Doordash
-description: Hypernova Labs is a fast-growing tech startup focused on building next-generation collaboration tools powered by AI and real-time data. Their mission is to redefine the way remote teams communicate and build products together.
+description: DoorDash is a logistics and technology platform that enables on-demand delivery by connecting consumers with local merchants through a seamless mobile and web interface. Leveraging real-time data, routing algorithms, and a scalable infrastructure, DoorDash powers efficient delivery and pickup experiences across food, groceries, and retail. 
 techStack:
-  - NextJS
-  - TypeScript
-  - GraphQL
-  - TailwindCSS
-  - Node.js
-  - AWS
-  - Redis
+  - Kotlin
+  - Sigma
+  - Snowflake
+  - Kafka
 ---
 
 import {TimelineItem} from "../../components/mdx/Timeline";
@@ -18,28 +15,21 @@ import {Timeline} from "../../components/mdx/Timeline";
 
 <Timeline>
     <TimelineItem
-        title="Lead Frontend Engineer"
-        duration="02/2025 - Present"
-        location="Remote / Hybrid (NYC)"
+        title="Software Engineer"
+        duration="08/2025 - Present"
+        location="New York, New York (NYC)"
     >
-        - Leading the frontend engineering team to build AI-driven real-time collaboration platforms.
-        - Spearheaded migration to **GraphQL** APIs and optimized frontend data handling.
-        - Established design system in **TailwindCSS** for unified UX across products.
-        - Actively involved in product discovery and rapid prototyping with PMs and Designers.
-    </TimelineItem>
+     </TimelineItem>
 
     <TimelineItem
-        title="Senior Software Engineer"
-        duration="08/2024 - 01/2025"
-        location="Remote"
+        title="Software Engineer Intern"
+        duration="06/2024 - 08/2024"
+        location="New York, New York (NYC)"
     >
-        - Developed new core features for the Hypernova App, enabling team presence and live document collaboration.
-        - Implemented server-side rendering (SSR) strategies to improve TTFB and Core Web Vitals.
-        - Introduced lightweight **microfrontend** architecture for faster parallel development.
+        - Developed Kafka streaming pipelines to capture and process store badge promotion events, allowing real-time debugging of campaign ranking and selection for DoorDash's promotion platform.
+        - Implemented an end-to-end data flow from Feed Service to Snowflake, leveraging Kafka and Flink for real-time stream processing, and created Snowflake tables to store campaign and badge ranking data.
+        - Designed and optimized interactive dashboards using Sigma to visualize store badge data, significantly improving the ability to diagnose and resolve client-facing badge display issues.
+        - Collaborated with cross-functional teams to integrate event-driven systems across the Feed and Promotion services, deploying solutions that ensured accurate and efficient processing of store badge campaigns for up to 50% of DD users
     </TimelineItem>
 </Timeline>
 
-## Key Projects
-
-- **NovaFlow**: Built the live-collaboration engine enabling shared cursors, live text editing, and instant notifications.
-- **AI Meeting Summarizer**
