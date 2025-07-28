@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import {FaGithub, FaLinkedin, FaGoodreads, FaEnvelope, FaInstagram} from 'react-icons/fa'
-import {appVersion} from "@/lib/constants";
+import { FaGithub, FaLinkedin, FaGoodreads, FaEnvelope, FaInstagram } from 'react-icons/fa'
+import { appVersion } from "@/lib/constants";
 
 export default function Footer() {
 
@@ -15,29 +15,33 @@ export default function Footer() {
                     href="https://github.com/Chacon-Miguel"
                     aria-label="GitHub"
                     className="hover:text-blue-500 transition-transform hover:scale-125 duration-200"
+                    target="_blank"
                 >
-                    <FaGithub/>
+                    <FaGithub />
                 </Link>
                 <Link
                     href="https://www.linkedin.com/in/chaconm36/"
                     aria-label="LinkedIn"
                     className="hover:text-blue-500 transition-transform hover:scale-125 duration-200"
+                    target="_blank"
                 >
-                    <FaLinkedin/>
+                    <FaLinkedin />
                 </Link>
                 <Link
                     href="https://www.goodreads.com/user/show/190494717-miguel-chacon"
                     aria-label="GoodReads"
                     className="hover:text-blue-500 transition-transform hover:scale-125 duration-200"
+                    target="_blank"
                 >
-                    <FaGoodreads/>
+                    <FaGoodreads />
                 </Link>
                 <Link
                     href="https://www.instagram.com/mig9253"
                     aria-label="Instagram"
                     className="hover:text-blue-500 transition-transform hover:scale-125 duration-200"
+                    target="_blank"
                 >
-                    <FaInstagram/>
+                    <FaInstagram />
                 </Link>
                 <Link
                     href="mailto:chaconm36@gmail.com"
@@ -45,7 +49,7 @@ export default function Footer() {
                     aria-label="Email"
                     className="hover:text-blue-500 transition-transform hover:scale-125 duration-200"
                 >
-                    <FaEnvelope/>
+                    <FaEnvelope />
                 </Link>
             </div>
 
@@ -56,7 +60,7 @@ export default function Footer() {
             {/* You can update or remove this for your own template */}
             <p className="text-xs sm:text-sm">
                 <Link href={`https://github.com/alemoraru/nextjs-portofolio-website/releases/tag/v${appVersion}`}
-                      rel="noopener noreferrer">
+                    rel="noopener noreferrer">
                     <span
                         className="font-semibold hover:text-blue-500 transition-colors duration-200"
                     >

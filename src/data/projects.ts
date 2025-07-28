@@ -1,15 +1,15 @@
 import { ProjectProps } from "@/lib/types"
 
 const projects: ProjectProps[] = [
-    // {
-    //     slug: 'project-A',
-    //     title: 'YouNovate',
-    //     image: '/projects/pictureA.jpg',
-    //     description: 'A platform for innovative ideas and solutions.',
-    //     startDate: '2023-01',
-    //     endDate: '2023-06',
-    //     techStack: ['React', 'TypeScript', 'TailwindCSS', 'Node.js', 'PostgreSQL', 'aws'],
-    // },
+    {
+        slug: 'project-A',
+        title: 'YouNovate',
+        image: '/projects/pictureA.jpg',
+        description: 'A platform for innovative ideas and solutions.',
+        startDate: '2023-01',
+        endDate: '2023-06',
+        techStack: ['React', 'TypeScript', 'TailwindCSS', 'Node.js', 'PostgreSQL', 'aws'],
+    },
     // {
     //     slug: 'project-B',
     //     title: 'VoteChain',

@@ -5,6 +5,11 @@ import IntroSection from "@/components/IntroSection";
 import RecentWork from "@/components/RecentWork";
 import RecentProjects from "@/components/RecentProjects";
 import RecentBlogPosts from "@/components/RecentBlogPosts";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 
 /**
  * Home component that serves as the main landing page for the portfolio.
