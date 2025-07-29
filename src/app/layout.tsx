@@ -82,9 +82,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				{/* Dot Background Layer */}
 				<DotBackground />
 				<ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-					<button onClick={() => setDarkMode((prev) => !prev)}>
+					{/* <button onClick={() => setDarkMode((prev) => !prev)}>
 						Toggle Mode
-					</button>
+					</button> */}
 					<Header />
 					<main className="flex-grow container mx-auto px-4 py-6">
 						{children}
