@@ -1,45 +1,54 @@
-import type {Metadata} from "next";
+"use client";
+
+import type { Metadata } from "next";
 import "./globals.css";
-import {Gabarito} from "next/font/google";
-import React, {ReactNode} from "react";
+import { Gabarito } from "next/font/google";
+import React, { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { lightTheme, darkTheme } from "../theme/theme";
+import { ThemeProvider } from "@emotion/react";
+import { useState } from "react";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 
 const gabarito = Gabarito({
-    variable: "--font-gabarito",
-    subsets: ["latin"]
+	variable: "--font-gabarito",
+	subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-    title: 'Miguel Chacon',
-    description: 'Miguel Chacons portfolio website',
-    icons: {
-        icon: '/icons/favicon.ico',
-        shortcut: '/icons/favicon.ico',
-        apple: '/icons/favicon.ico',
-    },
-    metadataBase: new URL('https://miguelchacon.dev'),
-    openGraph: {
-        title: 'Miguel Chacons portfolio website',
-        description: 'Miguel Chacon portfolio website',
-        url: 'https://nextjs-portofolio-website.vercel.app',
-        siteName: 'Miguel Chacon portfolio website',
-        images: [
-            {
-                url: '/og-image.png',
-                width: 1200,
-                height: 630,
-                alt: 'Miguel Chacon'
-            },
-        ],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Miguel Chacon',
-        description: '',
-        images: ['/og-image.png']
-    }
-}
+// export const metadata: Metadata = {
+// 	title: "Miguel Chacon",
+// 	description: "Miguel Chacons portfolio website",
+// 	icons: {
+// 		icon: "/icons/favicon.ico",
+// 		shortcut: "/icons/favicon.ico",
+// 		apple: "/icons/favicon.ico",
+// 	},
+// 	metadataBase: new URL("https://miguelchacon.dev"),
+// 	openGraph: {
+// 		title: "Miguel Chacons portfolio website",
+// 		description: "Miguel Chacon portfolio website",
+// 		url: "https://nextjs-portofolio-website.vercel.app",
+// 		siteName: "Miguel Chacon portfolio website",
+// 		images: [
+// 			{
+// 				url: "/og-image.png",
+// 				width: 1200,
+// 				height: 630,
+// 				alt: "Miguel Chacon",
+// 			},
+// 		],
+// 	},
+// 	twitter: {
+// 		card: "summary_large_image",
+// 		title: "Miguel Chacon",
+// 		description: "",
+// 		images: ["/og-image.png"],
+// 	},
+// };
 
 // This script initializes the theme based on user preference or saved settings
 // And is used to avoid FOUC (Flash of Unstyled Content) on the initial load
@@ -52,33 +61,44 @@ const themeInitScript = `
     document.documentElement.classList.add(theme);
     if (theme === 'dark') document.documentElement.classList.add('dark');
   } catch(e) {}
-})();`
+})();`;
 
-export default function RootLayout({children}: { children: ReactNode }) {
-    return (
-        <html lang="en" className={`${gabarito.className} ${gabarito.variable}`} suppressHydrationWarning>
-        <head>
-            <script dangerouslySetInnerHTML={{__html: themeInitScript}}/>
-            <title>My Developer Portfolio</title>
-        </head>
-        <body
-            className={`antialiased flex flex-col min-h-screen transition-colors ${gabarito.className} ${gabarito.variable}`}
-        >
-        {/* Dot Background Layer */}
-        <div
-            className={`
+export default function RootLayout({ children }: { children: ReactNode }) {
+	const [darkMode, setDarkMode] = useState(false);
+	return (
+		<html
+			lang="en"
+			className={`${gabarito.className} ${gabarito.variable}`}
+			suppressHydrationWarning
+		>
+			<head>
+				<script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+				<title>My Developer Portfolio</title>
+			</head>
+			<body
+				className={`antialiased flex flex-col min-h-screen transition-colors ${gabarito.className} ${gabarito.variable}`}
+			>
+				{/* Dot Background Layer */}
+				<div
+					className={`
             fixed inset-0 -z-10
             bg-[radial-gradient(circle,_#d1d5db_1px,_transparent_1px)]
             dark:bg-[radial-gradient(circle,_#3f3f46_1px,_transparent_1px)]
             bg-[length:30px_30px]
             [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)]
           `}
-        />
-
-        <Header/>
-        <main className="flex-grow container mx-auto px-4 py-6">{children}</main>
-        <Footer/>
-        </body>
-        </html>
-    )
+				/>
+				<ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+					<button onClick={() => setDarkMode((prev) => !prev)}>
+						Toggle Mode
+					</button>
+					<Header />
+					<main className="flex-grow container mx-auto px-4 py-6">
+						{children}
+					</main>
+					<Footer />
+				</ThemeProvider>
+			</body>
+		</html>
+	);
 }
