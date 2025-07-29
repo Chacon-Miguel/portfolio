@@ -14,6 +14,7 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import DotBackground from "@/components/DotBackground";
+import { SettingsProvider } from "@/context/SettingsContext";
 
 const gabarito = Gabarito({
 	variable: "--font-gabarito",
@@ -79,18 +80,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 			<body
 				className={`antialiased flex flex-col min-h-screen transition-colors ${gabarito.className} ${gabarito.variable}`}
 			>
-				{/* Dot Background Layer */}
-				<DotBackground />
-				<ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-					{/* <button onClick={() => setDarkMode((prev) => !prev)}>
-						Toggle Mode
-					</button> */}
-					<Header />
-					<main className="flex-grow container mx-auto px-4 py-6">
-						{children}
-					</main>
-					<Footer />
-				</ThemeProvider>
+				<SettingsProvider>
+					{/* Dot Background Layer */}
+					<DotBackground />
+					<ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+						<Header />
+						<main className="flex-grow container mx-auto px-4 py-6">
+							{children}
+						</main>
+						<Footer />
+					</ThemeProvider>
+				</SettingsProvider>
 			</body>
 		</html>
 	);
