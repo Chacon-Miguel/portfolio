@@ -6,13 +6,14 @@ import { Gabarito } from "next/font/google";
 import React, { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { lightTheme, darkTheme } from "../theme/theme";
+import { lightTheme, darkTheme } from "@/theme/theme";
 import { ThemeProvider } from "@emotion/react";
 import { useState } from "react";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import DotBackground from "@/components/DotBackground";
 
 const gabarito = Gabarito({
 	variable: "--font-gabarito",
@@ -79,15 +80,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				className={`antialiased flex flex-col min-h-screen transition-colors ${gabarito.className} ${gabarito.variable}`}
 			>
 				{/* Dot Background Layer */}
-				<div
-					className={`
-            fixed inset-0 -z-10
-            bg-[radial-gradient(circle,_#d1d5db_1px,_transparent_1px)]
-            dark:bg-[radial-gradient(circle,_#3f3f46_1px,_transparent_1px)]
-            bg-[length:30px_30px]
-            [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)]
-          `}
-				/>
+				<DotBackground />
 				<ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
 					<button onClick={() => setDarkMode((prev) => !prev)}>
 						Toggle Mode
