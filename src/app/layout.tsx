@@ -1,6 +1,6 @@
 "use client";
 
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import "./globals.css";
 import { Gabarito } from "next/font/google";
 import React, { ReactNode } from "react";
@@ -66,7 +66,7 @@ const themeInitScript = `
 })();`;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-	const [darkMode, setDarkMode] = useState(false);
+	const [darkMode] = useState(false);
 	return (
 		<html
 			lang="en"
@@ -81,7 +81,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 				className={`antialiased flex flex-col min-h-screen transition-colors ${gabarito.className} ${gabarito.variable}`}
 			>
 				<SettingsProvider>
-					{/* Dot Background Layer */}
 					<DotBackground />
 					<ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
 						<Header />

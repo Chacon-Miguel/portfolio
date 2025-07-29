@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import ViewAllHeader from "@/components/ViewAllHeader";
 import work from "@/data/work";
 import WorkItem from "@/components/WorkItem";
-import styled from "@emotion/styled";
+// import styled from "@emotion/styled";
 
 export default function RecentWork() {
 	return (
